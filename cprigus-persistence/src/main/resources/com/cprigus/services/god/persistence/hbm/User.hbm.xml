@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2012 8:58:30 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.cprigus.services.god.persistence.hbm.Usuario" schema="goddev" table="user">
+    <id name="idUsuario" type="integer">
+      <column name="ID_USUARIO" precision="15" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="200" name="NOMBRE"/>
+    </property>
+    <property name="sexo" type="character">
+      <column name="SEXO"/>
+    </property>
+    <property name="fechaAlta" type="timestamp">
+      <column name="FECHA_ALTA"/>
+    </property>
+    <property name="ultConexion" type="timestamp">
+      <column name="ULT_CONEXION"/>
+    </property>
+    <property name="notificaciones" type="string">
+      <column length="2" name="NOTIFICACIONES"/>
+    </property>
+    <property name="email" type="string">
+      <column length="100" name="EMAIL"/>
+    </property>
+    <property name="password" type="string">
+      <column length="50" name="PASSWORD"/>
+    </property>
+    <property name="fechaNacimiento" type="date">
+      <column name="NACIMIENTO"/>
+    </property>
+    <property name="actividad" type="string">
+      <column length="50" name="ACTIVIDAD"/>
+    </property>
+  </class>
+</hibernate-mapping>

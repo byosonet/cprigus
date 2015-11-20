@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="principal" template="/WEB-INF/views/layout/principal.jsp">
+            <put-attribute name="title" value="Sólo a Dios la Gloria"/>
+            <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+            <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+	</definition>
+        
+        <definition name="detalle" extends="principal">
+            <put-attribute name="contenido" value="/WEB-INF/views/jsp/coro/detalle.jsp"/>
+	</definition>
+        
+        <definition name="registrar" extends="principal">
+            <put-attribute name="contenido" value="/WEB-INF/views/jsp/registrar.jsp"/>
+	</definition>
+        
+        <definition name="listaHimnario" extends="principal">
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/body.jsp"/>
+	</definition>
+        
+        <definition name="password" extends="principal">
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/password.jsp"/>
+	</definition>
+
+        <definition name="notfoundCoro" extends="principal">
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/notfoundCoro.jsp"/>
+	</definition>
+        
+        <definition name="detalleMailTemplateFailed" extends="principal">
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/temporal.jsp"/>
+	</definition>
+        
+</tiles-definitions>

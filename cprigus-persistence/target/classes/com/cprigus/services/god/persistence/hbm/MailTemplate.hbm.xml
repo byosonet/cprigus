@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2012 8:58:30 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.cprigus.services.god.persistence.hbm.MailTemplate" schema="goddev" table="mailtemplate">
+    <id name="idMailTemplate" type="integer">
+      <column name="ID_TEMPLATE" precision="11" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="description" type="string">
+      <column length="255" name="DESCRIPTION"/>
+    </property>
+    <property name="subject" type="string">
+      <column length="255" name="SUBJECT"/>
+    </property>
+    <property name="mailTemplate" type="clob">
+      <column name="HTML"/>
+    </property>
+  </class>
+</hibernate-mapping>

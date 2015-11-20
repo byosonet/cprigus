@@ -1,0 +1,21 @@
+
+package com.yappme.drools.adapater;
+import com.yappme.drools.vo.Empleado;
+ 
+// Sumamos el importe total de los productos
+rule "Programador"
+    when
+        empleado : Empleado(edad > 10)
+    then 
+        System.out.println("El usuario es: " + empleado.getNombre()+ " -- Aplicando la rule @@@@@@ Programador");
+        empleado.setActivity("Progamador");
+end
+
+
+rule "Geek"
+    when
+        empleado : Empleado(edad < 10)
+    then 
+        System.out.println("El usuario es: " + empleado.getNombre()+ " -- Aplicando la rule @@@@@@ Geek");
+        empleado.setActivity("Geek");
+end

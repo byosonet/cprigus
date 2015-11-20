@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="org.hibernate.transaction">true</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!-- CONEXION A DESARROLLO PUBLICO
+    <property name="hibernate.connection.url">jdbc:mysql://127.5.213.3:3306/goddev</property>
+    <property name="hibernate.connection.username">adminSr28Vzr</property>
+    <property name="hibernate.connection.password">uViMZt9ErT67</property>
+    
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/goddev</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    -->
+    <!-- CONEXION A DESARROLLO LOCAL-->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/goddev</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <property name="connection.pool_size">5</property>
+    <!--
+    <property name="hibernate.connection.provider_class">
+            com.cprigus.services.god.persistence.cp.DBCPConnectionProvider
+    </property>
+    <property name="hibernate.dbcp.initialSize">8</property>
+    <property name="hibernate.dbcp.maxActive">20</property>
+    <property name="hibernate.dbcp.maxIdle">20</property>
+    <property name="hibernate.dbcp.minIdle">0</property>
+    <property name="hibernate.dbcp.removeAbandonedTimeout=">60</property>
+    <property name="hibernate.dbcp.removeAbandoned=">true</property>
+    <property name="hibernate.dbcp.maxWait=">10000</property>-->
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+    <property name="hibernate.use_sql_comments">true</property>
+    <property name="hibernate.cache.use_query_cache">false</property>
+    <property name="hibernate.generate_statistics">false</property>
+    <property name="hibernate.cache.use_structured_entries">false</property>
+    <property name="hibernate.cache.use_second_level_cache">true</property>
+    <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+    <property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+    <property name="current_session_context_class">thread</property>
+    <mapping resource="com/cprigus/services/god/persistence/hbm/User.hbm.xml"/>
+    <mapping resource="com/cprigus/services/god/persistence/hbm/Choir.hbm.xml"/>
+    <mapping resource="com/cprigus/services/god/persistence/hbm/Property.hbm.xml"/>
+    <mapping resource="com/cprigus/services/god/persistence/hbm/Changeset.hbm.xml"/>
+    <mapping resource="com/cprigus/services/god/persistence/hbm/DeliveryFailed.hbm.xml"/>
+    <mapping resource="com/cprigus/services/god/persistence/hbm/MailTemplate.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

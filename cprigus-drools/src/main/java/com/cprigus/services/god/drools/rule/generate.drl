@@ -1,0 +1,56 @@
+package com.cprigus.services.god.drools;
+//generated from Decision Table
+import com.cprigus.services.god.drools.vo.Empleado;
+// rule values at B9, header at B4
+rule "PuestosInformaticos_9"
+	when
+		empleado: Empleado(edad > 100, edad < 110, nombre == "Gustavo")
+	then
+		empleado.setNombre("Novato");
+		empleado.setActivity("Programador"); System.out.println("nombre: " + empleado.getNombre());
+end
+
+// rule values at B10, header at B4
+rule "PuestosInformaticos_10"
+	when
+		empleado: Empleado(edad > 100, edad < 110)
+	then
+		empleado.setActivity("Geek"); System.out.println("nombre: " + empleado.getNombre());
+end
+
+// rule values at B11, header at B4
+rule "PuestosInformaticos_11"
+	when
+		empleado: Empleado(edad > 100, edad < 110)
+	then
+		empleado.setActivity("Experto"); System.out.println("nombre: " + empleado.getNombre());
+end
+
+// rule values at B12, header at B4
+rule "PuestosInformaticos_12"
+	when
+		empleado: Empleado(edad > 100, edad < 110)
+	then
+		empleado.setEdad(21);
+end
+
+// rule values at B13, header at B4
+rule "PuestosInformaticos_13"
+	when
+		empleado: Empleado(edad > 100, edad < 110)
+	then
+		empleado.setEdad(15);
+		empleado.setNombre("Priscila");
+		empleado.setActivity("Arquitecto"); System.out.println("nombre: " + empleado.getNombre());
+end
+
+// rule values at B14, header at B4
+rule "PuestosInformaticos_14"
+	when
+		empleado: Empleado(edad > 1, edad < 50)
+	then
+		empleado.setEdad(10);
+		empleado.setNombre("marco");
+		empleado.setActivity("prueba"); System.out.println("nombre: " + empleado.getNombre());
+end
+

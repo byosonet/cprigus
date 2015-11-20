@@ -1,0 +1,28 @@
+package com.cprigus.services.god.drools;
+import com.cprigus.services.god.drools.vo.UserTemp;
+
+rule "Validar_Mayoria_Edad"
+	when
+		userteamp: UserTemp(edad > 18)
+	then
+		userteamp.setValidado(true); 
+                System.out.println(" -- El usuario si cumple la edad requerida: " + userteamp.getNombre());
+end
+
+rule "Validar_Email"
+	when
+		userteamp: UserTemp(email=="gtrejo.armenta@gmail.com")
+	then
+		userteamp.setValidado(false); 
+                userteamp.setMensaje("Este email: "+userteamp.getEmail()+" ha sido bloqueado por el sistema."); 
+                System.out.println(" -- Este email ha sido bloqueado por el sistema: " + userteamp.getEmail());
+end
+
+rule "Validar_Minoria_Edad"
+	when
+		userteamp: UserTemp(edad < 18)
+	then
+		userteamp.setValidado(false); 
+                userteamp.setMensaje("El sistema no puede registrar menores de edad, debe ser mayor a 18 a&ntilde;os."); 
+                System.out.println(" -- El usuario no cumple con la edad mínima: " + userteamp.getNombre());
+end

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2012 8:58:30 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.cprigus.services.god.persistence.hbm.Coro" schema="goddev" table="choir">
+    <id name="idCoro" type="integer">
+      <column name="ID_CORO" precision="15" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="100" name="NOMBRE"/>
+    </property>
+    <property name="autor" type="string">
+      <column length="100" name="AUTOR"/>
+    </property>
+    <property name="fechaAct" type="timestamp">
+      <column name="FECHA_ACT"/>
+    </property>
+    <property name="descripcion" type="clob">
+      <column name="DESCRIPCION"/>
+    </property>
+    <property name="numCoro" type="string">
+      <column length="20" name="NUM_CORO"/>
+    </property>
+    <property name="activo" type="integer">
+      <column length="1" name="ACTIVO"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2012 8:58:30 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.cprigus.services.god.persistence.hbm.Changeset" schema="goddev" table="changeset">
+    <id name="idChangeset" type="integer">
+      <column name="ID_CHANGESET" precision="11" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="idUsuario" type="string">
+      <column length="255" name="ID_USUARIO"/>
+    </property>
+    <property name="movement" type="string">
+      <column length="255" name="MOVEMENT"/>
+    </property>
+    <property name="idCoro" type="string">
+      <column length="255" name="ID_CORO"/>
+    </property>
+    <property name="fechaMov" type="timestamp">
+      <column name="FECHA"/>
+    </property>
+  </class>
+</hibernate-mapping>

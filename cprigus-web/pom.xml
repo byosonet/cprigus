@@ -1,0 +1,304 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cprigus.services</groupId>
+    <artifactId>cprigus-web</artifactId>
+    <version>1.0.1</version>
+    <packaging>war</packaging>
+    <name>cprigus-web</name>
+
+    <properties>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springframework.version>4.1.4.RELEASE</springframework.version>	
+   </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.jettison</groupId>
+            <artifactId>jettison</artifactId>
+            <version>1.2</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>6.0</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        
+        <!-- Servlet -->
+        <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.5</version>
+                <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>2.1</version>
+                <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
+        </dependency>
+        <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.12</version>
+          <scope>test</scope>
+        </dependency>
+
+        <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+        <!-- Tiles -->
+        <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-core</artifactId>
+                <version>2.2.1</version>
+        </dependency>
+
+        <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-api</artifactId>
+                <version>2.2.1</version>
+        </dependency>
+
+        <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-jsp</artifactId>
+                <version>2.2.1</version>
+        </dependency>
+
+        <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-template</artifactId>
+                <version>2.2.1</version>
+        </dependency>
+
+        <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-servlet</artifactId>
+                <version>2.2.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- Spring MVC support -->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+           <version>${springframework.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework.version}</version>
+         </dependency>
+         
+         <dependency>
+              <groupId>javax.mail</groupId>
+              <artifactId>mail</artifactId>
+              <version>1.4</version>
+         </dependency>
+         
+         <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${springframework.version}</version>
+	</dependency>
+        
+        <dependency>
+            <groupId>org.springframework.webflow</groupId>
+            <artifactId>spring-js</artifactId>
+            <version>2.0.9.RELEASE</version>
+            <exclusions>
+                    <exclusion>
+                            <groupId>commons-logging</groupId>
+                            <artifactId>commons-logging</artifactId>
+                    </exclusion>
+            </exclusions>
+	</dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+
+        <!-- Jackson JSON Processor -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        
+        <!-- Dependencies Externas -->
+        <dependency>
+            <groupId>com.cprigus.services</groupId>
+            <artifactId>cprigus-drools</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency> 
+        <dependency>
+            <groupId>com.cprigus.services</groupId>
+            <artifactId>cprigus-persistence</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>     
+    </dependencies>
+
+        <build>
+            <!--<finalName>${project.artifactId}##${project.version}</finalName>-->
+            <finalName>cprigus</finalName>
+            <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.1.1</version>
+                        <configuration>
+                            <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
+                            
+                            <packagingExcludes>
+                                WEB-INF/lib/activation-1.1.jar,	       
+                                WEB-INF/lib/commons-digester-2.0.jar,			   
+                                WEB-INF/lib/jackson-core-2.4.1.jar,	
+                                WEB-INF/lib/mysql-connector-java-5.1.6.jar,		  
+                                WEB-INF/lib/spring-tx-4.1.4.RELEASE.jar,
+                                WEB-INF/lib/antlr-2.7.6.jar,		       
+                                WEB-INF/lib/commons-discovery-20040218.194635.jar,	   
+                                WEB-INF/lib/jackson-databind-2.4.1.jar,	
+                                WEB-INF/lib/quartz-2.2.1.jar,			  
+                                WEB-INF/lib/spring-web-4.1.4.RELEASE.jar,
+                                WEB-INF/lib/aopalliance-1.0.jar,       
+                                WEB-INF/lib/commons-logging-1.2.jar,			   
+                                WEB-INF/lib/jasypt-1.9.0.jar,		
+                                WEB-INF/lib/slf4j-api-1.7.5.jar,		  
+                                WEB-INF/lib/spring-webmvc-4.1.4.RELEASE.jar,
+                                WEB-INF/lib/asm-1.5.3.jar,		       
+                                WEB-INF/lib/commons-pool-1.5.4.jar,			   
+                                WEB-INF/lib/jasypt-hibernate3-1.9.0.jar,	
+                                WEB-INF/lib/spring-aop-4.1.4.RELEASE.jar,		  
+                                WEB-INF/lib/tiles-api-2.2.1.jar,
+                                WEB-INF/lib/asm-attrs-1.5.3.jar,	       
+                                WEB-INF/lib/dom4j-1.6.1.jar,				   
+                                WEB-INF/lib/javassist-3.4.GA.jar,		
+                                WEB-INF/lib/spring-beans-4.1.4.RELEASE.jar,		  
+                                WEB-INF/lib/tiles-core-2.2.1.jar,
+                                WEB-INF/lib/axis-1.4.jar,		       
+                                WEB-INF/lib/ehcache-1.2.3.jar,			   
+                                WEB-INF/lib/jaxrpc-api-1.1.jar,		
+                                WEB-INF/lib/spring-context-4.1.4.RELEASE.jar,	  
+                                WEB-INF/lib/tiles-jsp-2.2.1.jar,
+                                WEB-INF/lib/axis-wsdl4j-1.2-RC1.jar,        
+                                WEB-INF/lib/ejb3-persistence-1.0.1.GA.jar,		   
+                                WEB-INF/lib/jcl-over-slf4j-1.5.8.jar,	
+                                WEB-INF/lib/spring-context-support-4.1.4.RELEASE.jar,  
+                                WEB-INF/lib/tiles-servlet-2.2.1.jar,
+                                WEB-INF/lib/c3p0-0.9.1.1.jar,	       
+                                WEB-INF/lib/hibernate-3.2.5.ga.jar,			   
+                                WEB-INF/lib/jdbc-stdext-2.0.jar,		
+                                WEB-INF/lib/spring-core-4.1.4.RELEASE.jar,		  
+                                WEB-INF/lib/tiles-template-2.2.1.jar,
+                                WEB-INF/lib/cglib-2.1_3.jar,		       
+                                WEB-INF/lib/hibernate-annotations-3.3.1.GA.jar,	   
+                                WEB-INF/lib/jstl-1.2.jar,			
+                                WEB-INF/lib/spring-expression-4.1.4.RELEASE.jar,
+                                WEB-INF/lib/commons-beanutils-1.8.0.jar,    
+                                WEB-INF/lib/hibernate-commons-annotations-3.0.0.ga.jar,  
+                                WEB-INF/lib/jta-1.1.jar,			
+                                WEB-INF/lib/spring-hibernate3-2.0.8.jar,
+                                WEB-INF/lib/commons-collections-2.1.1.jar,  
+                                WEB-INF/lib/hibernate-entitymanager-3.3.2.GA.jar,	   
+                                WEB-INF/lib/log4j-1.2.17.jar,		
+                                WEB-INF/lib/spring-jdbc-2.0.8.jar,
+                                WEB-INF/lib/commons-dbcp-1.4.jar,	       
+                                WEB-INF/lib/jackson-annotations-2.4.0.jar,		   
+                                WEB-INF/lib/mail-1.4.jar,			
+                                WEB-INF/lib/spring-js-2.0.9.RELEASE.jar,
+                                WEB-INF/lib/jettison-1.2.jar,
+                                WEB-INF/lib/stax-api-1.0.1.jar,
+                                WEB-INF/lib/commons-codec-1.2.jar,
+                                WEB-INF/lib/xstream-1.3.1.jar,
+                                WEB-INF/lib/xpp3_min-1.1.4c.jar,
+                                WEB-INF/lib/stringtemplate-3.2.1.jar,
+                                WEB-INF/lib/mvel2-2.1.0.drools16.jar,
+                                WEB-INF/lib/knowledge-internal-api-5.4.0.Final.jar,
+                                WEB-INF/lib/knowledge-api-5.4.0.Final.jar,
+                                WEB-INF/lib/jxl-2.6.10.jar,
+                                WEB-INF/lib/ecj-3.5.1.jar,
+                                WEB-INF/lib/drools-templates-5.4.0.Final.jar,
+                                WEB-INF/lib/drools-decisiontables-5.4.0.Final.jar,
+                                WEB-INF/lib/drools-core-5.4.0.Final.jar,
+                                WEB-INF/lib/drools-compiler-5.4.0.Final.jar,
+                                WEB-INF/lib/antlr-runtime-3.3.jar,
+                                WEB-INF/lib/antlr-3.3.jar,
+                                WEB-INF/lib/antlr-2.7.7.jar,
+                                WEB-INF/lib/commons-collections-3.2.1.jar,
+                                WEB-INF/lib/commons-lang-2.4.jar,
+                                WEB-INF/lib/velocity-1.7.jar
+                                
+                            </packagingExcludes>
+                            
+                        </configuration>
+                    </plugin>
+                </plugins>
+        </build>
+
+</project>

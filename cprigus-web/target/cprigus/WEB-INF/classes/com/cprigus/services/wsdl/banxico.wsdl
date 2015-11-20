@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.dgie.banxico.org.mx" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.dgie.banxico.org.mx" xmlns:intf="http://ws.dgie.banxico.org.mx" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+
+   <wsdl:message name="reservasInternacionalesBanxicoResponse">
+
+      <wsdl:part name="result" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="reservasInternacionalesBanxicoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="tiposDeCambioBanxicoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="tasasDeInteresBanxicoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="udisBanxicoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="tiposDeCambioBanxicoResponse">
+
+      <wsdl:part name="result" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="udisBanxicoResponse">
+
+      <wsdl:part name="result" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="tasasDeInteresBanxicoResponse">
+
+      <wsdl:part name="result" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="DgieWSPort">
+
+      <wsdl:operation name="reservasInternacionalesBanxico">
+
+         <wsdl:input message="impl:reservasInternacionalesBanxicoRequest" name="reservasInternacionalesBanxicoRequest"/>
+
+         <wsdl:output message="impl:reservasInternacionalesBanxicoResponse" name="reservasInternacionalesBanxicoResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="tasasDeInteresBanxico">
+
+         <wsdl:input message="impl:tasasDeInteresBanxicoRequest" name="tasasDeInteresBanxicoRequest"/>
+
+         <wsdl:output message="impl:tasasDeInteresBanxicoResponse" name="tasasDeInteresBanxicoResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="tiposDeCambioBanxico">
+
+         <wsdl:input message="impl:tiposDeCambioBanxicoRequest" name="tiposDeCambioBanxicoRequest"/>
+
+         <wsdl:output message="impl:tiposDeCambioBanxicoResponse" name="tiposDeCambioBanxicoResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="udisBanxico">
+
+         <wsdl:input message="impl:udisBanxicoRequest" name="udisBanxicoRequest"/>
+
+         <wsdl:output message="impl:udisBanxicoResponse" name="udisBanxicoResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="DgieWSPortSoapBinding" type="impl:DgieWSPort">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="reservasInternacionalesBanxico">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="reservasInternacionalesBanxicoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="reservasInternacionalesBanxicoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="tasasDeInteresBanxico">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="tasasDeInteresBanxicoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="tasasDeInteresBanxicoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="tiposDeCambioBanxico">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="tiposDeCambioBanxicoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="tiposDeCambioBanxicoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="udisBanxico">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="udisBanxicoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="udisBanxicoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws.dgie.banxico.org.mx" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="DgieWS">
+
+      <wsdl:port binding="impl:DgieWSPortSoapBinding" name="DgieWSPort">
+
+         <wsdlsoap:address location="http://www.banxico.org.mx/DgieWSWeb/DgieWS"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

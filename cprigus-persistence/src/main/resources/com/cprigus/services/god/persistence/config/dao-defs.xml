@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">           
+       
+    <bean id="usuarioDao"
+        class="com.cprigus.services.god.persistence.dao.UsuarioDaoImpl"
+        p:sessionFactory-ref="sessionFactory"/>
+    
+    <bean id="coroDao"
+        class="com.cprigus.services.god.persistence.dao.CoroDaoImpl"
+        p:sessionFactory-ref="sessionFactory"/>
+    
+     <bean id="propiedadSistemaDao"
+        class="com.cprigus.services.god.persistence.dao.PropiedadSistemaDaoImpl"
+        p:sessionFactory-ref="sessionFactory"/>
+     
+     <bean id="changesetDao"
+        class="com.cprigus.services.god.persistence.dao.ChangesetDaoImpl"
+        p:sessionFactory-ref="sessionFactory"/>
+     
+     <bean id="deliveryFailedDao"
+        class="com.cprigus.services.god.persistence.dao.DeliveryFailedDaoImpl"
+        p:sessionFactory-ref="sessionFactory"/>
+     
+     <bean id="mailTemplateDao"
+        class="com.cprigus.services.god.persistence.dao.MailTemplateDaoImpl"
+        p:sessionFactory-ref="sessionFactory"/>
+
+</beans>
