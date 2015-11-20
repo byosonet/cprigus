@@ -113,7 +113,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/" style="color:white;">Himnario Presbiteriano</a>
+            <a class="navbar-brand" href="/" style="color:white;">CPrigus Panel Administrador</a>
           </div>
           <div style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -132,7 +132,7 @@
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="nombre"></label>
                     <div class="col-sm-9">
-                        <div style="text-align:center"><label>Descarga la aplicaci&oacute;n para tu m&oacute;vil.</label><br><img width="150px" height="150px" src="${contextpath}/static/resources/apk/QR.png">
+                        <div style="text-align:center"><label>Bienvenido a CPrigus.</label><br><img width="150px" height="150px" src="${contextpath}/static/resources/img/cpanel_user.png">
                       </div>
                     </div>
                 </div>
